@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import { BiUserCircle, BiCartAlt,} from "react-icons/bi";
+import { BiUserCircle, BiCartAlt } from "react-icons/bi";
 // import data from
 import SearchResults from "./SearchResults";
 import { CartContext } from "./CartComponents/CartContext";
@@ -30,12 +30,14 @@ const Header = () => {
           Contact
         </Con>
       </LinkWrap>
+
       <CartWrap>
-        {/* <Search placeholder={"Search"} type="text"></Search> */}
         <SearchWrapper>
           <SearchResults />
         </SearchWrapper>
-        <StyledBiUserCircle />
+        {/* <Search placeholder={"Search"} type="text"></Search> */}
+
+        {/* <StyledBiUserCircle /> */}
         <NavLink to={"/shop/cart"}>
           <ShopWrapper>
             <StyledBiCartAlt />
@@ -56,6 +58,7 @@ const Header = () => {
 const SearchWrapper = styled.div`
   display: flex;
   align-items: center;
+  margin: 0 2rem;
   button {
     background: transparent;
     outline: none;
@@ -110,7 +113,7 @@ const CartWrap = styled.div`
 `;
 
 const StoreName = styled(NavLink)`
-  font-size: 3vw;
+  font-size: 2.5vw;
   /* font-size: clamp(1.5vw,2.5vw,3vw); */
   color: #fff;
   font-weight: 700;
@@ -121,9 +124,9 @@ const StoreName = styled(NavLink)`
 `;
 
 const Cat = styled(NavLink)`
-  font-size: 1.5vw;
+  font-size: 1.4vw;
   font-weight: 550;
-  margin-left: 1rem;
+  margin-left: 2rem;
   color: #fff;
   &:hover {
     opacity: 0.5;
@@ -132,8 +135,8 @@ const Cat = styled(NavLink)`
 `;
 
 const All = styled(NavLink)`
-  margin-left: 1rem;
-  font-size: 1.5vw;
+  margin-left: 2rem;
+  font-size: 1.4vw;
   font-weight: 550;
   color: #fff;
   &:hover {
@@ -143,8 +146,8 @@ const All = styled(NavLink)`
 `;
 
 const About = styled(NavLink)`
-  margin-left: 1rem;
-  font-size: 1.5vw;
+  margin-left: 2rem;
+  font-size: 1.4vw;
   font-weight: 550;
   color: #fff;
   &:hover {
@@ -154,8 +157,8 @@ const About = styled(NavLink)`
 `;
 
 const Con = styled(NavLink)`
-  margin-left: 1rem;
-  font-size: 1.5vw;
+  margin-left: 2rem;
+  font-size: 1.4vw;
   font-weight: 550;
   color: #fff;
   &:hover {
@@ -167,7 +170,7 @@ const Con = styled(NavLink)`
 const LinkWrap = styled.div`
   display: flex;
   align-items: flex-end;
-  padding: 1rem;
+  padding: 1.5rem;
   margin-left: 1rem;
 `;
 
@@ -179,10 +182,12 @@ const Main = styled.div`
   width: 100vw;
   display: flex;
   justify-content: space-between;
+  padding: 1rem;
 `;
 
 const ShopWrapper = styled.div`
   display: flex;
+  margin: 0 2rem;
 `;
 const CartItem = styled.div`
   color: white;

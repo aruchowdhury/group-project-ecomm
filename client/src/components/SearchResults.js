@@ -37,15 +37,18 @@ const SearchResults = ({}) => {
 };
 
 const Input = styled.input`
+  height: 3rem;
+  width: 20rem;
   border-radius: 10px;
 `;
 
 const StyledBiSearchAlt2 = styled(BiSearchAlt2)`
   margin-top: 10px;
-  width: 2.3vw;
+  width: 1.2vw;
   height: 100%;
   color: white;
   cursor: pointer;
+
   &:hover {
     opacity: 0.5;
     transition: all 0.2s ease-in-out;

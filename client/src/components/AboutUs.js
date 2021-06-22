@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Footer from "./Footer"
+import Footer from "./Footer";
 
 const AboutUs = () => {
   return (
@@ -25,7 +25,7 @@ const AboutUs = () => {
           fermentum felis aliquet tristique eleifend.
         </p>
       </InnerWrap>
-      <Footer/>
+      <Footer />
     </Wrap>
   );
 };
@@ -38,7 +38,7 @@ const Wrap = styled.div`
 `;
 const InnerWrap = styled.div`
   max-width: 600px;
-  margin: 0 auto;
+  margin: 30px auto;
   padding: 40px;
   h1 {
     padding: 0 0 20px 0;
@@ -46,5 +46,8 @@ const InnerWrap = styled.div`
   p {
     padding: 0 0 20px 0;
   }
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
 `;
 export default AboutUs;

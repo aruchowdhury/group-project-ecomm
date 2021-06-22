@@ -65,90 +65,68 @@ const Cart = () => {
     <Wrapper>
       {/* <Heading>Cart Items</Heading> */}
 
-      <Divider>
-        <OrderWrapper>
-          {cartItems.length === 0 && (
-            <EmptyMsg>Go shop crazy! add a lot of item to your cart!</EmptyMsg>
-          )}
-          {cartItems.map((item) => (
-            <AllOrders key={item._id}>
-              <ItemImg src={item.imageSrc} alt={item.name} />
-              <ItemName>{item.name}</ItemName>
-              <ButtonWrap>
-                <RemoveButton onClick={() => onRemove(item)}>-</RemoveButton>
-                <AddButton onClick={() => onAdd(item)}>+</AddButton>
-              </ButtonWrap>
-              <PriceDiv>
-                <span>{item.quantity}</span> x <span>{item.price}</span>
-              </PriceDiv>
-            </AllOrders>
-          ))}{" "}
-        </OrderWrapper>
-        {cartItems.length !== 0 && (
-          <OrderSummary>
-            <ItemsPrice>
-              <span>Price:</span> ${itemsPrice.toFixed(2)}
-            </ItemsPrice>
-            <Tax>
-              <span>Tax:</span> ${taxPrice.toFixed(2)}{" "}
-            </Tax>
-            <Shipping>
-              <span>Shipping:</span> ${shippingPrice}
-            </Shipping>
-            <FinalPrice>
-              <span>Total:</span> ${totalPrice.toFixed(2)}{" "}
-            </FinalPrice>
-
-            <Terms>
-              <label>
-                Accept terms and condition{" "}
-                <input type="checkbox" required></input>{" "}
-              </label>
-            </Terms>
-
-            <CheckoutButton onClick={submitHandler}>Checkout</CheckoutButton>
-          </OrderSummary>
+      <OrderWrapper>
+        {cartItems.length === 0 && (
+          <EmptyMsg>Go shop crazy! add a lot of item to your cart!</EmptyMsg>
         )}
-      </Divider>
-      <CartModal />
+        {cartItems.map((item) => (
+          <AllOrders key={item._id}>
+            <ItemImg src={item.imageSrc} alt={item.name} />
+            <ItemName>{item.name}</ItemName>
+            <ButtonWrap>
+              <RemoveButton onClick={() => onRemove(item)}>-</RemoveButton>
+              <AddButton onClick={() => onAdd(item)}>+</AddButton>
+            </ButtonWrap>
+            <PriceDiv>
+              <span>{item.quantity}</span> x <span>{item.price}</span>
+            </PriceDiv>
+          </AllOrders>
+        ))}{" "}
+      </OrderWrapper>
+      {cartItems.length !== 0 && (
+        <OrderSummary>
+          <ItemsPrice>
+            <span>Price:</span> ${itemsPrice.toFixed(2)}
+          </ItemsPrice>
+          <Tax>
+            <span>Tax:</span> ${taxPrice.toFixed(2)}{" "}
+          </Tax>
+          <Shipping>
+            <span>Shipping:</span> ${shippingPrice}
+          </Shipping>
+          <FinalPrice>
+            <span>Total:</span> ${totalPrice.toFixed(2)}{" "}
+          </FinalPrice>
+
+          <Terms>
+            <label>
+              Accept terms and condition{" "}
+              <input type="checkbox" required></input>{" "}
+            </label>
+          </Terms>
+
+          <CheckoutButton onClick={submitHandler}>Checkout</CheckoutButton>
+        </OrderSummary>
+      )}
     </Wrapper>
   );
 };
 
 const Wrapper = styled.div`
-  padding: 2rem;
-  font-size: 20px;
-  width: 55vw;
-  height: 100%;
-  margin: auto;
-  margin-top: 4rem;
-  border-radius: 10px;
-  font-size: 1rem;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-
-  /* background: linear-gradient(
-    to left,
-    black 33.33%,
-    white 33.33%,
-    white 33.33%
-  ); */
-  @media only screen and (max-width: 700px) {
-    background: white;
-    height: 100%;
+  margin: 5rem 20rem;
+  display: grid;
+  grid-template-columns: 2fr 1.5fr;
+  justify-content: stretch;
+  align-items: stretch;
+  grid-gap: 0.5rem;
+  @media (max-width: 675px) {
+    grid-template-columns: 20rem;
   }
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 12px 12px rgba(0, 0, 0, 0.12);
+  transition: 0.3s ease-in-out;
 `;
-
-// const Heading = styled.div`
-//   font-size: 3rem;
-//   padding: 0.5rem;
-//   text-align: center;
-//   background-color: black;
-//   color: white;
-//   border-top-left-radius: 10px;
-//   border-top-right-radius: 10px;
-// `;
 
 const EmptyMsg = styled.div`
   font-size: 2rem;
@@ -163,14 +141,26 @@ const AllOrders = styled.div`
   align-items: flex-start;
   flex-direction: row;
   padding: 0.5rem;
-  margin: 10px;
-  /* border-bottom: 0.05rem solid black; */
-  box-shadow: 0px 15px 10px -15px;
+  margin: 0.3rem;
+  grid-row: 1/3;
+  border-radius: 0.3rem;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 12px 12px rgba(0, 0, 0, 0.12);
+  transition: 0.3s ease-in-out;
+  &:hover {
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.25),
+      0 4px 4px rgba(0, 0, 0, 0.25), 0 8px 8px rgba(0, 0, 0, 0.25),
+      0 12px 12px rgba(0, 0, 0, 0.25);
+
+    transform: translateY(-0.2rem);
+  }
+
   @media only screen and (max-width: 700px) {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     align-content: center;
   }
@@ -208,13 +198,6 @@ const PriceDiv = styled.div`
   }
 `;
 
-const Divider = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-`;
 const OrderSummary = styled.div`
   background: black;
   display: flex;
@@ -225,7 +208,7 @@ const OrderSummary = styled.div`
   align-content: flex-end;
   font-size: 2rem;
   color: white;
-  margin: 10px;
+  margin: 0.5rem;
   @media only screen and (max-width: 700px) {
     align-content: center;
     color: black;
