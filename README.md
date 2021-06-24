@@ -24,7 +24,7 @@ Andrew Paul: https://github.com/helloandrewpaul
 
 Fork and clone the respository into a code editor of your choice.
 
-### _*Starting front-end*_
+### Starting front-end
 
 - open a second terminal and type <code>cd client</code> to access the client directory
 - run <code>yarn install</code> to install dependencies
@@ -32,7 +32,7 @@ Fork and clone the respository into a code editor of your choice.
 
 The front-end will launch here: https://localhost:3000
 
-### _*Front-end dependencies*_
+### Front-end dependencies
 
 ```
   "dependencies": {
@@ -51,7 +51,7 @@ The front-end will launch here: https://localhost:3000
   },
 ```
 
-### _*Starting back-end*_
+### Starting back-end
 
 - open a terminal and type <code>cd server</code> to access the server directory
 - run <code>yarn install</code> to install dependencies
@@ -59,7 +59,7 @@ The front-end will launch here: https://localhost:3000
 
 The back-end will launch here: https://localhost:4000
 
-### _*Back-end dependencies*_
+### Back-end dependencies
 
 ```
   "dependencies": {
@@ -70,9 +70,9 @@ The back-end will launch here: https://localhost:4000
   },
 ```
 
-### _*Endpoints*_
+### Endpoints
 
-Endpoints are documented in [server/README.md](./API_DOCS.md)
+Endpoints are documented in [server/README.md](https://github.com/cmdshift4/group-project-ecomm/blob/main/server/README.md)
 
 ---
 
