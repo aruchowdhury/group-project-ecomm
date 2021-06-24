@@ -1,5 +1,122 @@
 # Wearables E-Commerce Project
 
+## Description
+
+This group project is an e-commerce shop where customers can shop for watches. This web app is fully responsive and data persistent. It was built with React, Node.js, Express and styled using styled-components.
+
+---
+
+## Contributors
+
+Arunava Chowdhury: https://github.com/aruchowdhury
+
+Emmanuel Flambard: https://github.com/emmanuelflambard
+
+Sean Fox: https://github.com/cmdshift4
+
+Andrew Paul: https://github.com/helloandrewpaul
+
+<img src="./server/assets/ecomm_1.png" style="width: 100%;" />
+
+---
+
+## Setup Instructions
+
+Fork and clone the respository into a code editor of your choice.
+
+### _*Starting front-end*_
+
+- open a second terminal and type <code>cd client</code> to access the client directory
+- run <code>yarn install</code> to install dependencies
+- run <code>yarn start</code> to start the front-end
+
+The front-end will launch here: https://localhost:3000
+
+### _*Front-end dependencies*_
+
+```
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-icons": "^4.2.0",
+    "react-infinite-scroll": "^0.1.5",
+    "react-infinite-scroll-component": "^6.1.0",
+    "react-modal": "^3.13.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "styled-components": "^5.3.0"
+  },
+```
+
+### _*Starting back-end*_
+
+- open a terminal and type <code>cd server</code> to access the server directory
+- run <code>yarn install</code> to install dependencies
+- run <code>yarn start</code> to start the back-end
+
+The back-end will launch here: https://localhost:4000
+
+### _*Back-end dependencies*_
+
+```
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "file-system": "^2.2.2",
+    "morgan": "^1.10.0"
+  },
+```
+
+### _*Endpoints*_
+
+Endpoints are documented in [server/README.md](./API_DOCS.md)
+
+---
+
+## Components
+
+### Categories
+
+<img src="./server/assets/ecomm_2.png" style="width: 100%;" />
+
+> - sort through store items by category
+
+---
+
+### Shop All
+
+<img src="./server/assets/ecomm_3.png" style="width: 100%;" />
+
+> - hover over each item to reveal details, price, stock count and option to an add to the cart
+> - if an item is added to the cart, a counter increases next to the cart icon
+
+---
+
+### Search Bar
+
+<img src="./server/assets/ecomm_5.png" style="width: 100%;" />
+
+> - search the store using item keywords
+
+---
+
+### Cart & Checkout
+
+<img src="./server/assets/ecomm_7.png" style="width: 100%;" />
+
+> - each item in the cart displays an item image, details, description, quantity and total price of the order
+> - ability to change quantity and remove items from cart
+> - total price of order including subtotal and taxes are displayed are checkout
+
+---
+
+## _Guidelines from Concordia Bootcamps below:_
+
+---
+
 [See the list of TEAMS](__documentation/TEAMS.md)
 
 You will make use of _everything_ that you have learned thus far in the bootcamp to build an e-commerce app that will showcase all of the provided _wearables_ items.
